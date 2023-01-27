@@ -1,0 +1,109 @@
+h1 {
+    font-size: 60px;
+    text-align: center;
+    /*You may have noticed there's a horrible gap at the top of the body. 
+    That happens because browsers apply default styling to the <h1> element 
+    (among others). That might seem like a bad idea, 
+    but the intent is to provide basic readability for unstyled pages. 
+    To eliminate the gap, we overwrite the browser's default styling with 
+    the setting margin: 0;.
+    Following that, we set the heading text to be the same color as the HTML background color.
+    Next, we set the heading's top and bottom padding to 20 pixels.*/
+    margin: 0;
+    padding: 20px 0;
+    color: #00539f;
+    text-shadow: 3px 3px 1px rgb(238, 132, 87);
+}
+
+/*text-shadow: 3px 3px 1px black;*/
+
+
+/*Finally, text-shadow applies a shadow to the text content of the element. Its four values are:
+
+    The first pixel value sets the horizontal offset of the shadow from the text: how far it moves across.
+    The second pixel value sets the vertical offset of the shadow from the text: how far it moves down.
+    The third pixel value sets the blur radius of the shadow. A larger value produces a more fuzzy-looking shadow.
+    The fourth value sets the base color of the shadow.*/
+
+
+p,
+li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: purple;
+
+}
+
+html {
+    background-color: purple;
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+    /* this rule 
+    sets the background color for the entire page.*/
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+
+/*The instructions above assume that you're using an image smaller than the width set on the body. 
+    (600 pixels) If your image is larger, it will overflow the body, spilling into the rest of the page. 
+    To fix this, you can either: 
+    1) reduce the image width using a graphics editor, or 
+    2) use CSS to size the image by setting the width property on the <img> element with a smaller value*/
+/*The <body> is a block element, meaning it takes up space on the page. 
+    The margin applied to a block element will be respected by other elements on the page. In contrast, images are inline elements, for the auto margin trick to work on this image,
+    we must give it block-level behavior using display: block;*/
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #ff9500;
+    border: 5px solid black;
+    padding: 0 20px 20px 20px;
+}
+
+/* It's expecting a classname after . If your purpose is to apply css to entire document then use
+
+*{
+        max-width: 370px;
+        padding: 1px 1px 1px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+
+. is used for classes in CSS, hence it expects the . to be followed by a classname. For more info visit MDN for more info MDN CSS Selectors
+
+Also for your convenience below is a screenshot of real-time log from vscode Real-time VSCode log
+
+As you can see it says identifier expected, this means that a classname is a must after . selector and when you do something like .class_name{} you will see that the error is gone
+This forces the body to always be 600 pixels wide.
+    margin: 0 auto; When you set two values on a property like margin or padding,
+    the first value affects the element's top and bottom side (setting it to 0 in this case); the second value affects the left and right side. 
+    (Here, auto is a special value that divides the available horizontal space evenly between left and right). 
+    You can also use one, two, three, or four values, as documented in Margin Syntax.
+    background-color: #FF9500; This sets the element's background color. 
+    This project uses a reddish orange for the body background color, as opposed to dark blue for the <html> element. 
+    (Feel free to experiment.)
+    padding: 0 20px 20px 20px; This sets four values for padding. The goal is to put some space around the content. 
+    In this example, there is no padding on the top of the body, and 20 pixels on the right, bottom and left. The values set top, right, bottom, left, in that order. As with margin, you can use one, two, three, or four values, as documented in Padding Syntax.
+    border: 5px solid black; This sets values for the width, style and color of the border. 
+    In this case, it's a five-pixelwide, solid black border, on all sides of the body.*/
+
+
+/*border: 1px solid black;}/*
+Positioning and styling the main page title
+Now let's set font sizes for elements that 
+will have text inside the HTML body 
+(<h1>, <li>, and <p>). We'll also center the 
+heading. Finally, let's expand the second ruleset
+(below) with settings for line height and letter
+spacing to make body content more readable.*/
